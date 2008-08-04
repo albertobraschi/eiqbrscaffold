@@ -1,13 +1,13 @@
 EiqBrScaffold
 =============
 
-Introduction goes here.
+scaffold used in my projects
 
 
 Example
 =======
 
-Example goes here.
+./script/generate eiq_br_scaffold Thing name:string
 
 
-Copyright (c) 2008 [name of plugin creator], released under the MIT license
+Copyright (c) 2008 kivanio at gmail.com, released under the MIT license
