@@ -1,4 +1,7 @@
-<%%= error_messages_for :<%= singular_name %> %>
+<fieldset class="fieldset">
+	<legend>Dados do <%= singular_name %></legend>
+	
+<%%= error_messages_for :<%= singular_name %>, :header_message => "Por favor, tente novamente!", :message => "Nós tivemos alguns problemas ao gravar:" %>
 
 <%% form_for(@<%= singular_name %>) do |f| %>
 <% for attribute in attributes -%>
@@ -13,3 +16,4 @@
     <%%= f.submit nome_botao, :class => 'bt_save', :disable_with => 'Cadastrando...' %>
   </p>
 <%% end %>
+</fieldset>
