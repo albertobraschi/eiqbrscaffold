@@ -12,9 +12,7 @@
 	<thead>
   <tr>
 <% for attribute in attributes -%>
-
 <%%= sort_header_tag('<%= attribute.column.human_name.downcase %>', :caption => '<%= attribute.column.human_name %>', :title => '<%= attribute.column.human_name %>') %>
-
 <% end -%>
 <th></th>
 <th></th>
