@@ -20,6 +20,7 @@
   </tr>
 </thead>
 <tbody>
+<%% if !@<%= plural_name %>.blank? %>	
 <%% for <%= singular_name %> in @<%= plural_name %> %>
   <tr class="<%%= cycle('odd', 'even') %>">
 <% for attribute in attributes -%>
@@ -29,7 +30,8 @@
     <td><%%= link_to 'Editar', edit_<%= singular_name %>_path(<%= singular_name %>), :class => 'bt_edit' %></td>
     <td><%%= link_to 'Apagar', <%= singular_name %>_path(<%= singular_name %>), :confirm => 'Você tem certeza?', :method => :delete, :class => 'bt_delete' %></td>
   </tr>
-<%% end %>
+<%% end -%>
+<%% end -%>
 </tbody>
 </table>
 

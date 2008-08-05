@@ -51,7 +51,7 @@ class <%= controller_class_name %>Controller < ApplicationController
 
   # DELETE /<%= table_name %>/1
   def destroy
-    if @<%= file_name %>.destroy
+    if @<%= file_name %>.update_attribute(:deletado, 1)
       flash[:notice] = '<%= class_name %> apagado(a) com sucesso.'
     end
     redirect_to(<%= table_name %>_url)
