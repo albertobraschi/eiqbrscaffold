@@ -1,19 +1,12 @@
-<fieldset class="fieldset">
-	<legend>Dados do <%= singular_name %></legend>
-	
 <%%= error_messages_for :<%= singular_name %>, :header_message => "Por favor, tente novamente!", :message => "Nós tivemos alguns problemas ao gravar:" %>
 
-<%% form_for(@<%= singular_name %>) do |f| %>
+<%% form_for(@<%= singular_name %>) do |f|
+	field_set_tag( "Dados do <%= singular_name %>" ) do %>
 <% for attribute in attributes -%>
-  <p>
-    <b><%= attribute.column.human_name %></b><br />
-    <%%= f.<%= attribute.field_type %> :<%= attribute.name %> %>
-	<%%= error_message_on '<%= singular_name %>', '<%= attribute.name %>' %>
-  </p>
-
+    <%%= f.<%= attribute.field_type %> :<%= attribute.name %>, :required => true %>
 <% end -%>
-  <p>
-    <%%= f.submit nome_botao, :class => 'bt_save', :disable_with => 'Cadastrando...' %>
-  </p>
-<%% end %>
-</fieldset>
+
+    <%%= f.submit nome_botao, :disable_with => 'Cadastrando...' %>
+
+<%% end -%>
+<%% end -%>
