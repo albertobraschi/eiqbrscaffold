@@ -2,6 +2,9 @@
 	<a href='/<%= plural_name %>'>Listando <%= plural_name %></a> -> <a href='/<%= plural_name %>/<%%= @<%= singular_name %>.id %>'>Detalhando <%= singular_name %></a>
 <%% end -%>
 
+<fieldset class="fieldset">
+	<legend>Dados do <%= singular_name %></legend>
+	
 <% for attribute in attributes -%>
 <p>
   <b><%= attribute.column.human_name %>:</b>
@@ -9,6 +12,8 @@
 </p>
 
 <% end -%>
+
+</fieldset>
 
 <%%= link_to 'Editar', edit_<%= singular_name %>_path(@<%= singular_name %>), :class => 'bt_edit' %> |
 <%%= link_to 'Voltar', <%= plural_name %>_path, :class => 'bt_back' %>
