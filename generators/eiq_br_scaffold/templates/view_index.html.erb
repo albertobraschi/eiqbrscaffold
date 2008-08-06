@@ -4,7 +4,11 @@
 
 <%%= render :partial => 'shared/msgerro' %>
 
-<%%= link_to 'Novo(a) <%= singular_name %>', new_<%= singular_name %>_path, :class => 'criar' %>
+<div class="criar">
+	<div class="criar_dir">
+		<%%= link_to 'Novo(a) <%= singular_name %>', new_<%= singular_name %>_path %>
+	</div>
+</div>
 
 <div class="clear"></div>
 
