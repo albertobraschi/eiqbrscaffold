@@ -9,7 +9,7 @@ class <%= controller_class_name %>Controller < ApplicationController
     sort_init 'updated_at'
     sort_update
     
-    @<%= table_name %> = <%= class_name %>.visivel.paginate :page => params[:page], :per_page => 10, :order => sort_clause
+    @<%= table_name %> = <%= class_name %>.without_deleted.paginate :page => params[:page], :per_page => 10, :order => sort_clause
   end
 
   # GET /<%= table_name %>/1
@@ -51,9 +51,7 @@ class <%= controller_class_name %>Controller < ApplicationController
 
   # DELETE /<%= table_name %>/1
   def destroy
-    @<%= file_name %>.deletado = 1
-    @<%= file_name %>.deleter_id = current_user.id
-    if @<%= file_name %>.save(false)
+    if @<%= file_name %>.delete_with_user(current_user.id)
       flash[:notice] = '<%= class_name %> apagado(a) com sucesso.'
     end
     redirect_to(<%= table_name %>_url)
