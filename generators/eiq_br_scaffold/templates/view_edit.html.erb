@@ -1,7 +1,9 @@
 <%% content_for :navegacao do %>
 	<a href='/<%= plural_name %>'><%= plural_name.capitalize %></a> -> <a href='/<%= plural_name %>/<%%= @<%= singular_name %>.id %>/edit'>Editando <%= singular_name %></a>
 <%% end -%>
-
+<%% content_for :cor do %>
+_cinza
+<%% end -%>
 <%%= render :partial => 'form', :locals => { :nome_botao => "Atualizar"} %>
 
 <%%= link_to 'Detalhar', <%= singular_name %>_path(@<%= singular_name %>), :class => 'bt_detal' %> |

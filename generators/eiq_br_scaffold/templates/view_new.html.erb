@@ -1,7 +1,9 @@
 <%% content_for :navegacao do %>
 	<a href='/<%= plural_name %>'><%= plural_name.capitalize %></a> -> <a href='/<%= plural_name %>/new'>Novo(a) <%= singular_name %></a>
 <%% end -%>
-
+<%% content_for :cor do %>
+_cinza
+<%% end -%>
 <%%= render :partial => 'form', :locals => { :nome_botao => "Criar"} %>
 
 <%%= link_to 'Voltar', <%= plural_name %>_path, :class => 'bt_back' %>

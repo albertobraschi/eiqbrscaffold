@@ -1,7 +1,9 @@
 <%% content_for :navegacao do %>
 	<a href='/<%= plural_name %>'><%= plural_name.capitalize %></a> -> <a href='/<%= plural_name %>/<%%= @<%= singular_name %>.id %>'>Detalhando <%= singular_name %></a>
 <%% end -%>
-
+<%% content_for :cor do %>
+_cinza
+<%% end -%>
 <fieldset class="fieldset">
 	<legend>Dados do <%= singular_name %></legend>
 	
