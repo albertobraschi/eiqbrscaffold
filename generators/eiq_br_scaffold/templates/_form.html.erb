@@ -1,6 +1,6 @@
 <%%= error_messages_for :<%= singular_name %>, :header_message => "Por favor, tente novamente!", :message => "Nós tivemos alguns problemas ao gravar:" %>
 
-<%% form_for(@<%= singular_name %>, :html => { :class => 'form' }) do |f|
+<%% form_for(@<%= singular_name %>) do |f|
 	field_set_tag( "Dados do <%= singular_name %>" ) do %>
 <% for attribute in attributes -%>
     <%%= f.<%= attribute.field_type %> :<%= attribute.name %>, :required => true %>
