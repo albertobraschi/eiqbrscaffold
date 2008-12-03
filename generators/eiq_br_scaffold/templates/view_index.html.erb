@@ -1,5 +1,5 @@
 <%% content_for :navegacao do %>
-	<a href='/<%= plural_name %>'>Listando <%= plural_name %></a>
+	<%%= link_to 'Listando <%= plural_name.capitalize %>', <%= plural_name %>_path %>
 <%% end -%>
 
 <%% content_for :cor do %>
