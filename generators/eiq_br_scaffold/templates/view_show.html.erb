@@ -1,5 +1,6 @@
 <%% content_for :navegacao do %>
-	<%%= link_to '<%= plural_name.capitalize %>', <%= plural_name %>_path %> -> <%%= link_to 'Detalhando <%= singular_name %>', <%= singular_name %>_path(@<%= singular_name %>) %>
+	<%%= link_to '<%= plural_name.capitalize %>', <%= plural_name %>_path %> ->
+	<%%= link_to 'Detalhando <%= singular_name %>', <%= singular_name %>_path(@<%= singular_name %>) %>
 <%% end -%>
 <%% content_for :cor do %>
 _cinza
