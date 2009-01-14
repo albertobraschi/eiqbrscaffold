@@ -32,7 +32,7 @@ _cinza
 <%% for <%= singular_name %> in @<%= plural_name %> %>
   <tr class="<%%= cycle('odd', 'even') %>">
 <% for attribute in attributes -%>
-    <td><%%=h <%= singular_name %>.<%= attribute.name %> if <%= singular_name %>.<%= attribute.name %> %></td>
+    <td><%%=h <%= singular_name %>.<%= attribute.name %> unless <%= singular_name %>.<%= attribute.name %>.blank? %></td>
 <% end -%>
     <td><%%= link_to 'Detalhar', <%= singular_name %>_path(<%= singular_name %>), :class => 'bt_detal' %></td>
     <td><%%= link_to 'Editar', edit_<%= singular_name %>_path(<%= singular_name %>), :class => 'bt_edit' %></td>

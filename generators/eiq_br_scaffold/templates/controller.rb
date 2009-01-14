@@ -9,7 +9,7 @@ class <%= controller_class_name %>Controller < ApplicationController
     sort_init 'updated_at'
     sort_update
     
-    @<%= table_name %> = <%= class_name %>.without_deleted.paginate :page => params[:page], :per_page => 10, :order => sort_clause
+    @<%= plural_name %> = <%= class_name %>.without_deleted.paginate :page => params[:page], :per_page => 10, :order => sort_clause
   end
 
   # GET /<%= table_name %>/1
