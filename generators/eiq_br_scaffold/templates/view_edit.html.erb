@@ -5,7 +5,7 @@
 <%% content_for :cor do %>
 _cinza
 <%% end -%>
-<%%= render :partial => 'form', :locals => { :nome_botao => "Atualizar"} %>
+<%%= render :partial => 'form', :locals => { :nome_botao => "Atualizar" } %>
 
 <%%= link_to 'Detalhar', <%= singular_name %>_path(@<%= singular_name %>), :class => 'bt_detal' %> |
 <%%= link_to 'Voltar', <%= plural_name %>_path, :class => 'bt_back' %>
